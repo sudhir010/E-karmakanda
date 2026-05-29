@@ -10,7 +10,16 @@
 
 ## Quick Start (Development)
 
-### 1. Start the PHP built-in server
+### Option A — One-click scripts
+
+| Platform | Command |
+|----------|---------|
+| Windows  | Double-click `start.bat` or run `.\start.bat` |
+| macOS/Linux | `bash start.sh` |
+
+The script automatically picks PHP if installed, otherwise falls back to a static Node.js server for the frontend.
+
+### Option B — PHP built-in server (recommended)
 
 ```bash
 php -S localhost:8000
