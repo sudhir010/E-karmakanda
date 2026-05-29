@@ -8,8 +8,10 @@ $isLoggedIn = isset($_SESSION['user_id']);
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="eKarmakanda – Preserving Ancient Hindu Rituals with Technology. Explore pujas, book pandits, and view auspicious dates." />
     <title>eKarmakanda - Home</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/toast.css" />
 </head>
 
 <body>
@@ -127,6 +129,8 @@ $isLoggedIn = isset($_SESSION['user_id']);
     <?php endif; ?>
 
 
+    <script src="js/toast.js"></script>
+    <script src="js/navbar.js"></script>
     <script src="js/script.js"></script>
 </body>
 

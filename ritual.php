@@ -9,9 +9,11 @@ $isLoggedIn = isset($_SESSION['user_id']);
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="View detailed information about Hindu rituals including requirements, duration, and benefits." />
     <title>Ritual Details – eKarmakanda</title>
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/ritual.css" />
+    <link rel="stylesheet" href="./css/toast.css" />
 </head>
 
 <body>
@@ -56,7 +58,28 @@ $isLoggedIn = isset($_SESSION['user_id']);
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 eKarmakanda. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>eKarmakanda</h4>
+                <p>Preserving ancient rituals with modern technology.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="pujas.php">Rituals</a></li>
+                    <li><a href="book.php">Book a Pandit</a></li>
+                    <li><a href="calendar.php">Calendar</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="faq.php">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2025 eKarmakanda. All rights reserved.</p>
     </footer>
 
     <?php if ($isLoggedIn): ?>
@@ -77,6 +100,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
 
 
 
+    <script src="./js/toast.js"></script>
     <script src="./js/navbar.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {

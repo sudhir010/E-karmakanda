@@ -9,15 +9,16 @@ $isLoggedIn = isset($_SESSION['user_id']);
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Check the Nepali calendar with tithis, festivals, and auspicious muhurat timings for planning your rituals." />
     <title>Nepali Calendar – eKarmakanda</title>
     <link rel="stylesheet" href="./css/navbar.css" />
     <link rel="stylesheet" href="./css/calendar.css" />
+    <link rel="stylesheet" href="./css/toast.css" />
 </head>
 
 <body>
-    <!-- Navbar -->
-  
-         <header>
+    <!-- Navbar --> 
+    <header>
         <nav class="navbar">
             <div class="logo">eKarmakanda</div>
             <div class="menu-toggle" id="menu-toggle">☰</div>
@@ -43,12 +44,9 @@ $isLoggedIn = isset($_SESSION['user_id']);
                 <?php else: ?>
                     <li><a href="signup.html" class="btn">Sign Up</a></li>
                 <?php endif; ?>
-
-
             </ul>
         </nav>
     </header>
-
 
     <!-- Calendar Section -->
     <main class="calendar-wrapper animate-on-scroll">
@@ -63,11 +61,31 @@ $isLoggedIn = isset($_SESSION['user_id']);
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 eKarmakanda. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>eKarmakanda</h4>
+                <p>Preserving ancient rituals with modern technology.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="pujas.php">Rituals</a></li>
+                    <li><a href="book.php">Book a Pandit</a></li>
+                    <li><a href="calendar.php">Calendar</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="faq.php">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <p class="footer-bottom">&copy; 2025 eKarmakanda. All rights reserved.</p>
     </footer>
 
-
-     <?php if ($isLoggedIn): ?>
+    <?php if ($isLoggedIn): ?>
         <div class="profile-sidebar" id="profile-sidebar">
             <div class="sidebar-header">
                 <span id="close-sidebar">&times;</span>
@@ -83,7 +101,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
         </div>
     <?php endif; ?>
 
-
+    <script src="./js/toast.js"></script>
     <script src="./js/navbar.js"></script>
 </body>
 

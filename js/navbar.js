@@ -1,28 +1,30 @@
-const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links");
-
-menuToggle.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-
-  if (navLinks.classList.contains("show")) {
-    menuToggle.innerHTML = "✖";
-  } else {
-    menuToggle.innerHTML = "☰";
-  }
-});
-// Close mobile nav on link click
-document.querySelectorAll("#nav-links a").forEach((link) => {
-  link.addEventListener("click", () => {
-    if (window.innerWidth <= 768) {
-      navLinks.classList.remove("show");
-      menuToggle.innerHTML = "☰";
-    }
-  });
-});
-
-// Sidebar profile icon functionality
-
 document.addEventListener("DOMContentLoaded", () => {
+  const menuToggle = document.getElementById("menu-toggle");
+  const navLinks = document.getElementById("nav-links");
+
+  if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+
+      if (navLinks.classList.contains("show")) {
+        menuToggle.innerHTML = "✖";
+      } else {
+        menuToggle.innerHTML = "☰";
+      }
+    });
+
+    // Close mobile nav on link click
+    document.querySelectorAll("#nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+          navLinks.classList.remove("show");
+          menuToggle.innerHTML = "☰";
+        }
+      });
+    });
+  }
+
+  // Sidebar profile icon functionality
   const profileIcon = document.getElementById("profile-icon");
   const sidebar = document.getElementById("profile-sidebar");
   const closeBtn = document.getElementById("close-sidebar");
