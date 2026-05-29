@@ -1,0 +1,32 @@
+ekarmakanda/
+│
+├── index.html             # Homepage
+├── pujas.html             # Rituals listing page
+├── ritual.html            # Single ritual detail page
+├── book.html              # Booking a pandit
+├── calendar.html          # Auspicious dates
+├── contact.html           # General contact page
+├── login.html             # For admin login
+│
+├── css/
+│   └── style.css
+│
+├── js/
+│   ├── script.js          # Shared functions
+│   ├── rituals.js         # Load ritual list dynamically
+│   └── calendar.js        # For calendar feature
+│
+├── assets/
+│   ├── images/
+│   ├── videos/
+│   └── pdfs/
+│
+├── data/
+│   └── pujas.json         # (Simulates database until backend is added)
+│
+├── admin/
+│   ├── dashboard.html     # Admin dashboard
+│   ├── upload.html        # For adding rituals/content
+│   └── admin.js
+│
+└── README.md

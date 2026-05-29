@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eKarmakanda - Sign Up</title>
+    <link rel="stylesheet" href="./css/form.css">
+</head>
+
+<body>
+    <form action="database/signup.php" method="post">
+        <h1>Sign Up</h1>
+        <div class="input-field">
+            <input type="text" name="fullname" id="fullname" placeholder="">
+            <label for="fullname">Fullname</label>
+        </div>
+        <div class="input-field">
+            <input type="email" name="email" id="email" placeholder="">
+            <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+            <input type="text" name="phonenumber" id="phonenumber" placeholder="">
+            <label for="phonenumber">Phone Number</label>
+        </div>
+        <div class="input-field">
+            <input type="password" name="password" id="password" placeholder="">
+            <label for="password">Password</label>
+        </div>
+        <div class="input-field">
+            <input type="password" name="confirmpassword" id="confirmpassword" placeholder="">
+            <label for="confirmpassword">Confirm password</label>
+        </div>
+        <button type="submit" class="btn">Sign Up</button>
+        <p>Already have an account? <a href="login.html">Login </a></p>
+    </form>
+
+    <!-- Toast Message -->
+    <div id="toast" class="toast hidden">
+        Email already exists. Please try logging in.
+    </div>
+
+    <script>
+        // Check URL for error flag
+        const urlParams = new URLSearchParams(window.location.search);
+        const error = urlParams.get('error');
+
+        if (error === 'duplicate_email') {
+            const toast = document.getElementById('toast');
+            toast.classList.remove('hidden');
+            toast.classList.add('show');
+
+            // Hide after 5 seconds
+            setTimeout(() => {
+                toast.classList.remove('show');
+                toast.classList.add('hidden');
+            }, 5000);
+        }
+    </script>
+
+</body>
+
+</html>

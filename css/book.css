@@ -1,0 +1,138 @@
+/* Reset + Base (optional, or load from global if needed) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fdfaf6;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* Booking Form Section */
+.form-section {
+  padding: 5rem 2rem 3rem;
+  max-width: 700px;
+  margin: 100px auto 2rem auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #46244c;
+}
+
+.form-section p {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.booking-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.booking-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fffefb;
+  transition: border-color 0.3s ease;
+}
+
+.booking-form input:focus,
+.booking-form select:focus,
+.booking-form textarea:focus {
+  outline: none;
+  border-color: #a63860;
+}
+
+.booking-form textarea {
+  resize: vertical;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #a63860;
+  color: #fff;
+  padding: 0.9rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+.btn:hover {
+  background-color: #832f4c;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #46244c;
+  color: #fff;
+  margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-section {
+    padding: 3rem 1.2rem;
+  }
+
+  .form-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+  }
+}
+
+.success-message {
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  background-color: #e6ffec;
+  color: #216b38;
+  border: 1px solid #b1e2c1;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  display: none;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,183 @@
+[
+  {
+    "id": 1,
+    "name": "Naamkaran",
+    "description": "Naamkaran is the sacred Hindu naming ceremony performed for a newborn. It is a joyous occasion where the child's name is chosen based on astrology and family tradition.",
+    "duration": "1-2 hours",
+    "requirements": "Child's horoscope, family members, offerings (flowers, coconut, sweets)",
+    "benefits": "Blessings for the child, positive identity, alignment with planetary energies",
+    "image": "./assets/images/naamkaran.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Griha Pravesh",
+    "description": "Griha Pravesh is the ritual performed before entering a new home. It purifies the space and invites positive energies into the house.",
+    "duration": "2-3 hours",
+    "requirements": "Kalash, coconut, turmeric, rice, priest, family presence",
+    "benefits": "Removes negative energy, brings peace and prosperity to the home",
+    "image": "./assets/images/grihapravesh.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Antyeshti (Last Rites)",
+    "description": "Antyeshti is the final rite in the life cycle, performed to ensure the departed soul attains moksha. It includes cremation and rituals for peace of the soul.",
+    "duration": "Variable",
+    "requirements": "Funeral arrangements, priest, family, offerings, ash immersion items",
+    "benefits": "Spiritual liberation of the soul, emotional closure for the family",
+    "image": "./assets/images/antyeshti.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Satyanarayan Katha",
+    "description": "This katha is performed to express gratitude to Lord Vishnu and seek his blessings. It is often conducted during housewarmings, weddings, or festivals.",
+    "duration": "2-3 hours",
+    "requirements": "Idol/photo of Lord Vishnu, prasad, priest, tulsi leaves, banana leaves",
+    "benefits": "Brings prosperity, removes obstacles, ensures success in ventures",
+    "image": "./assets/images/satyanarayan.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Upanayanam (Sacred Thread Ceremony)",
+    "description": "Upanayanam is the sacred thread ceremony signifying the start of formal education and spiritual study for young boys.",
+    "duration": "4-5 hours",
+    "requirements": "Yajnopavita (thread), family, priest, fire offerings, new clothes",
+    "benefits": "Spiritual discipline, blessings for education and knowledge",
+    "image": "./assets/images/upanayanam.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Shraddha (Ancestral Ritual)",
+    "description": "Shraddha is performed to honor ancestors and ensure their peace in the afterlife. It is performed on death anniversaries or during Pitru Paksha.",
+    "duration": "1-2 hours",
+    "requirements": "Cooked food, sesame seeds, water, darbha grass, photos of ancestors",
+    "benefits": "Pleasing the ancestors, removal of Pitru Dosha, blessings for the family",
+    "image": "./assets/images/shraddha.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Mundan (First Hair Cut)",
+    "description": "Mundan is the child's first haircut ceremony. It is believed to cleanse the child of past life negativity and promote healthy growth.",
+    "duration": "1 hour",
+    "requirements": "Child, barber, holy water, family, offerings",
+    "benefits": "Improves hair growth, purifies the body and soul, receives blessings",
+    "image": "./assets/images/mundan.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Sundarkand Path",
+    "description": "Sundarkand Path is a recitation from the Ramayana that glorifies Lord Hanuman. It is recited to overcome challenges and seek divine protection.",
+    "duration": "1.5-2 hours",
+    "requirements": "Hanuman idol/picture, path book, diya, incense, sweets",
+    "benefits": "Removes fear and negativity, brings courage and clarity",
+    "image": "./assets/images/sundarkand.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Navagraha Shanti",
+    "description": "This puja is done to appease the nine planets and balance their influences in one's horoscope. It's commonly performed during major life changes or planetary doshas.",
+    "duration": "3-4 hours",
+    "requirements": "Navagraha yantra, specific offerings, priest, horoscope copy",
+    "benefits": "Relief from planetary afflictions, peace, and progress in life",
+    "image": "./assets/images/navagraha.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Havan (Homam)",
+    "description": "Havan is a fire ritual where sacred offerings are made into the fire while chanting mantras. It is a purifying and auspicious ceremony for many occasions.",
+    "duration": "1-2 hours",
+    "requirements": "Havan kund, ghee, wood, samagri, priest",
+    "benefits": "Cleansing of space, spiritual growth, attracting positive energy",
+    "image": "./assets/images/havan.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Navagraha Shanti",
+    "description": "A puja performed to reduce the malefic effects of planets and ensure planetary harmony.",
+    "image": "./assets/images/navagraha.jpg",
+    "duration": "2-3 hours",
+    "requirements": ["Navagraha yantra", "Nine planetary offerings", "Panchamrit"],
+    "benefits": ["Balances planetary energies", "Improves personal and professional life"]
+  },
+  {
+    "id": 12,
+    "name": "Lakshmi Puja",
+    "description": "Dedicated to Goddess Lakshmi, this puja is performed for wealth, prosperity, and success.",
+    "image": "./assets/images/lakshmipuja.jpg",
+    "duration": "1.5 hours",
+    "requirements": ["Lotus flowers", "Rice grains", "Gold/silver coins", "Kalash"],
+    "benefits": ["Enhances prosperity", "Improves financial wellbeing"]
+  },
+  {
+    "id": 13,
+    "name": "Durga Saptashati Paath",
+    "description": "A powerful recitation of 700 verses invoking Goddess Durga’s protection, power, and blessings.",
+    "image": "./assets/images/durgasaptashati.jpg",
+    "duration": "4 hours",
+    "requirements": ["Durga idol", "Saptashati book", "Flowers", "Incense sticks"],
+    "benefits": ["Removes negativity", "Increases courage and faith"]
+  },
+  {
+    "id": 14,
+    "name": "Kaal Sarp Dosh Nivaran",
+    "description": "A remedy ritual performed to nullify the negative effects of Kaal Sarp Yoga in one’s horoscope.",
+    "image": "./assets/images/kaalsarp.jpg",
+    "duration": "3 hours",
+    "requirements": ["Snake idols", "Milk", "Black sesame", "Astrological chart"],
+    "benefits": ["Removes karmic blockages", "Improves luck and peace"]
+  },
+  {
+    "id": 15,
+    "name": "Pitru Paksha Shraddha",
+    "description": "Offerings made to ancestors during the Pitru Paksha period to ensure peace and blessings from the departed souls.",
+    "image": "./assets/images/pitru.jpg",
+    "duration": "1.5 hours",
+    "requirements": ["Til (sesame)", "Water", "Kusha grass", "Pind daan items"],
+    "benefits": ["Ancestor blessings", "Removes Pitru dosh"]
+  },
+  {
+    "id": 16,
+    "name": "Chandi Paath",
+    "description": "A sacred ritual involving recitation of Devi Mahatmyam to attain protection, strength, and spiritual upliftment.",
+    "image": "./assets/images/chandi.jpg",
+    "duration": "5-6 hours",
+    "requirements": ["Chandi Paath text", "Ghee lamp", "Flowers", "Coconut"],
+    "benefits": ["Victory over evil", "Mental and emotional strength"]
+  },
+  {
+    "id": 17,
+    "name": "Rudrabhishek Puja",
+    "description": "A ritual of pouring sacred items on Shiva Linga to seek Lord Shiva’s blessings.",
+    "image": "./assets/images/rudrabhishek.jpg",
+    "duration": "2 hours",
+    "requirements": ["Shiva Linga", "Milk", "Honey", "Bilva leaves"],
+    "benefits": ["Health, wealth and peace", "Removes fear and sins"]
+  },
+  {
+    "id": 18,
+    "name": "Mahamrityunjaya Jaap",
+    "description": "A life-saving ritual dedicated to Lord Shiva for healing and longevity.",
+    "image": "./assets/images/mahamrityunjaya.jpg",
+    "duration": "3-4 hours",
+    "requirements": ["Rudraksha mala", "Water", "Shivling", "Camphor"],
+    "benefits": ["Cures illness", "Extends life", "Removes fear of death"]
+  },
+  {
+    "id": 19,
+    "name": "Sundarkand Paath",
+    "description": "Recitation of Sundarkand to overcome troubles and invoke Lord Hanuman’s blessings.",
+    "image": "./assets/images/sundarkand.jpg",
+    "duration": "2 hours",
+    "requirements": ["Hanuman Chalisa", "Sindoor", "Flowers", "Diya"],
+    "benefits": ["Removes obstacles", "Gives mental strength"]
+  },
+  {
+    "id": 20,
+    "name": "Satyanarayan Katha",
+    "description": "A popular Hindu ritual worshipping Lord Vishnu to bring harmony and fulfillment.",
+    "image": "./assets/images/satyanarayan.jpg",
+    "duration": "2 hours",
+    "requirements": ["Panchamrit", "Tulsi leaves", "Banana", "Coconut"],
+    "benefits": ["Brings happiness and peace", "Ensures success"]
+  }
+]
+

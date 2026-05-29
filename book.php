@@ -1,0 +1,160 @@
+<?php
+session_start();
+$isLoggedIn = isset($_SESSION['user_id']);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book a Pandit – eKarmakanda</title>
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/book.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">eKarmakanda</div>
+            <div class="menu-toggle" id="menu-toggle">☰</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="pujas.php">Rituals</a></li>
+                <li><a href="book.php" class="active">Book a Pandit</a></li>
+                <li><a href="calendar.php">Calendar</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                <?php if ($isLoggedIn): ?>
+                    <li class="nav-profile">
+                        <div class="profile-wrapper">
+                            <img src="assets/images/Profile.png" alt="Profile" id="profile-icon" class="profile-icon" />
+                        </div>
+                    </li>
+                    <li>
+                        <form action="logout.php" method="post" style="display: inline;">
+                            <button type="submit" class="btn">Logout</button>
+                        </form>
+                    </li>
+                <?php else: ?>
+                    <li><a href="signup.html" class="btn">Sign Up</a></li>
+                <?php endif; ?>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Booking Form Section -->
+    <main class="form-section animate-on-scroll">
+        <h2>Book a Pandit</h2>
+        <p>Fill in your details to schedule a ritual with a certified priest.</p>
+
+        <form class="booking-form" id="booking-form" method="post" action="./database/submit_booking.php">
+            <div class="form-group">
+                <label for="fullName">Full Name*</label>
+                <input type="text" id="fullName" name="fullName" required />
+            </div>
+
+            <div class="form-group">
+                <label for="pujaType">Select Puja*</label>
+                <select id="pujaType" name="pujaType" required>
+                    <option value="">-- Choose a Ritual --</option>
+                    <option value="naamkaran">Naamkaran</option>
+                    <option value="grihapravesh">Griha Pravesh</option>
+                    <option value="antyeshti">Antyeshti</option>
+                    <option value="satyanarayan">Satyanarayan Katha</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Preferred Date*</label>
+                <input type="date" id="date" name="date" required />
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location*</label>
+                <input type="text" id="location" name="location" placeholder="City or Address" required />
+            </div>
+
+            <div class="form-group">
+                <label for="contact">Contact Number*</label>
+                <input type="tel" id="contact" name="contact" pattern="[0-9]{10}" required />
+            </div>
+
+            <div class="form-group">
+                <label for="notes">Additional Notes (optional)</label>
+                <textarea id="notes" name="notes" rows="4"></textarea>
+            </div>
+
+            <button type="submit" class="btn">Submit Booking</button>
+        </form>
+        <div class="success-message" id="success-message">
+            <p>✅ Your booking request has been submitted successfully!</p>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 eKarmakanda. All rights reserved.</p>
+    </footer>
+
+
+    <?php if ($isLoggedIn): ?>
+        <div class="profile-sidebar" id="profile-sidebar">
+            <div class="sidebar-header">
+                <span id="close-sidebar">&times;</span>
+            </div>
+            <div class="sidebar-content">
+                <img src="assets/images/Profile.png" alt="Profile" class="sidebar-profile-icon" />
+                <h2>Hello, <?php echo htmlspecialchars($_SESSION['fullname']); ?></h2>
+                <form action="./database/update_name.php" method="post" class="edit-name-form">
+                    <input type="text" name="new_name" placeholder="Edit your name" required>
+                    <button type="submit" class="btn">Update</button>
+                </form>
+            </div>
+        </div>
+    <?php endif; ?>
+
+    <script src="./js/navbar.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("booking-form");
+            const successMsg = document.getElementById("success-message");
+
+            form.addEventListener("submit", function(e) {
+              
+
+                // Gather form values
+                const name = form.fullName.value.trim();
+                const puja = form.pujaType.value;
+                const date = form.date.value;
+                const location = form.location.value.trim();
+                const contact = form.contact.value.trim();
+
+                // Simple validations
+                if (!name || !puja || !date || !location || !contact) {
+                    alert("Please fill in all required fields.");
+                    return;
+                }
+
+                if (!/^\d{10}$/.test(contact)) {
+                    alert("Contact number must be exactly 10 digits.");
+                    return;
+                }
+
+                // Show success message
+                successMsg.style.display = "block";
+
+                      
+
+                // Hide after 5 seconds
+                setTimeout(() => {
+                    successMsg.style.display = "none";
+                }, 5000);
+            });
+        });
+    </script>
+</body>
+
+</html>
