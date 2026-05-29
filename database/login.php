@@ -6,6 +6,11 @@ include 'config.php';
 
 // Handle POST request
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // CSRF check
+    if (!verify_csrf($_POST['csrf_token'] ?? '')) {
+        die("Invalid request.");
+    }
+
     $email = trim($_POST['email']);
     $password_input = trim($_POST['password']);
 
@@ -35,10 +40,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             header("Location: ../index.php");
             exit();
         } else {
-            echo "Incorrect password.";
+            header("Location: ../login.php?error=invalid_credentials");
+            exit();
         }
     } else {
-        echo "No account found with that email.";
+        header("Location: ../login.php?error=invalid_credentials");
+        exit();
     }
 
     $stmt->close();

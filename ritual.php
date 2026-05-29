@@ -43,7 +43,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
                         </form>
                     </li>
                 <?php else: ?>
-                    <li><a href="signup.html" class="btn">Sign Up</a></li>
+                    <li><a href="signup.php" class="btn">Sign Up</a></li>
                 <?php endif; ?>
 
 

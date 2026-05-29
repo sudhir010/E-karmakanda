@@ -5,6 +5,11 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 try {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // CSRF check
+        if (!verify_csrf($_POST['csrf_token'] ?? '')) {
+            die("Invalid request.");
+        }
+
         // Get form data
         $fullname = trim($_POST['fullname']);
         $email = trim($_POST['email']);
@@ -33,13 +38,13 @@ try {
         $stmt->execute();
 
         // Redirect to login page after success
-        header("Location: ../login.html");
+        header("Location: ../login.php");
         exit();
     }
 } catch (mysqli_sql_exception $e) {
     if (str_contains($e->getMessage(), "Duplicate entry")) {
         // Redirect back to signup with error message
-        header("Location: ../signup.html?error=duplicate_email");
+        header("Location: ../signup.php?error=duplicate_email");
         exit();
     } else {
         echo "Database error: " . $e->getMessage();

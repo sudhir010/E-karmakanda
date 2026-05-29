@@ -133,3 +133,25 @@ a {
 .toast.hidden {
     display: none;
 }
+
+/* Password strength */
+.field-hint {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+}
+
+.strength-bar {
+    display: flex;
+    gap: 4px;
+    width: 100%;
+    margin-top: 0.75rem;
+    height: 6px;
+}
+
+.strength-segment {
+    flex: 1;
+    border-radius: 3px;
+    background: #e0e0e0;
+    transition: background 0.3s ease;
+}

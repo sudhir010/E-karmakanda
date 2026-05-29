@@ -7,6 +7,11 @@ include 'config.php';
 
 // Handle only POST requests
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // CSRF check
+    if (!verify_csrf($_POST['csrf_token'] ?? '')) {
+        die("Invalid request.");
+    }
+
     // Retrieve and sanitize inputs
     $fullName   = trim($_POST['fullName'] ?? '');
     $pujaType   = trim($_POST['pujaType'] ?? '');

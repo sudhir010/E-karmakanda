@@ -6,6 +6,11 @@ include 'config.php';
 
 // Check if form is submitted via POST
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // CSRF check
+    if (!verify_csrf($_POST['csrf_token'] ?? '')) {
+        die("Invalid request.");
+    }
+
     // Sanitize user input
     $name = trim($_POST['name']);
     $email = trim($_POST['email']);
