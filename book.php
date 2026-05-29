@@ -119,40 +119,16 @@ $isLoggedIn = isset($_SESSION['user_id']);
     <script src="./js/navbar.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            const form = document.getElementById("booking-form");
-            const successMsg = document.getElementById("success-message");
-
-            form.addEventListener("submit", function(e) {
-              
-
-                // Gather form values
-                const name = form.fullName.value.trim();
-                const puja = form.pujaType.value;
-                const date = form.date.value;
-                const location = form.location.value.trim();
-                const contact = form.contact.value.trim();
-
-                // Simple validations
-                if (!name || !puja || !date || !location || !contact) {
-                    alert("Please fill in all required fields.");
-                    return;
-                }
-
-                if (!/^\d{10}$/.test(contact)) {
-                    alert("Contact number must be exactly 10 digits.");
-                    return;
-                }
-
-                // Show success message
-                successMsg.style.display = "block";
-
-                      
-
-                // Hide after 5 seconds
+            // Show success message if redirected after booking
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('status') === 'success') {
+                document.getElementById("success-message").style.display = "block";
                 setTimeout(() => {
-                    successMsg.style.display = "none";
+                    document.getElementById("success-message").style.display = "none";
                 }, 5000);
-            });
+                // Clean the URL
+                window.history.replaceState({}, document.title, window.location.pathname);
+            }
         });
     </script>
 </body>

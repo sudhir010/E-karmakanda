@@ -49,7 +49,7 @@ $isLoggedIn = isset($_SESSION['user_id']);
         <div class="hero-text">
             <h1>Preserving Ancient Rituals with Technology</h1>
             <p>Explore, learn, and perform Karmakanda with ease — anytime, anywhere.</p>
-            <a href="pujas.html" class="btn">Explore Rituals</a>
+            <a href="pujas.php" class="btn">Explore Rituals</a>
         </div>
     </section>
 
@@ -82,17 +82,17 @@ $isLoggedIn = isset($_SESSION['user_id']);
             <div class="card animate-on-scroll">
                 <h3>Naamkaran</h3>
                 <p>Naming ceremony for newborns. Performed on 11th or 12th day after birth.</p> <br>
-                <a href="ritual.html?id=naamkaran" class="btn">Learn More</a>
+                <a href="ritual.php?id=1" class="btn">Learn More</a>
             </div>
             <div class="card animate-on-scroll">
                 <h3>Griha Pravesh</h3>
                 <p>Auspicious ceremony when entering a new home for the first time.</p> <br>
-                <a href="ritual.html?id=grihapravesh" class="btn">Learn More</a>
+                <a href="ritual.php?id=2" class="btn">Learn More</a>
             </div>
             <div class="card animate-on-scroll">
                 <h3>Antyeshti</h3>
                 <p>Final rites (funeral). Helps guide the soul’s journey according to dharma.</p> <br>
-                <a href="ritual.html?id=antyeshti" class="btn">Learn More</a>
+                <a href="ritual.php?id=3" class="btn">Learn More</a>
             </div>
         </div>
     </section>

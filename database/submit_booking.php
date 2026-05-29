@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("ssssss", $fullName, $pujaType, $date, $location, $contact, $notes);
 
     if ($stmt->execute()) {
-            header("Location: ../book.php");
+            header("Location: ../book.php?status=success");
             exit();
     } else {
         echo json_encode(['status' => 'error', 'message' => 'Failed to save booking. Try again.']);

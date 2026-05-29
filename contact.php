@@ -101,20 +101,13 @@ $isLoggedIn = isset($_SESSION['user_id']);
 
     <script src="./js/navbar.js"></script>
     <script>
-        document.getElementById("contact-form").addEventListener("submit", function(e) {
-
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const message = document.getElementById("message").value.trim();
-
-            if (!name || !email || !message) {
-                alert("Please fill out all fields.");
-                return;
+        document.addEventListener("DOMContentLoaded", function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.get('status') === 'success') {
+                document.getElementById("form-message").style.display = "block";
+                // Clean the URL
+                window.history.replaceState({}, document.title, window.location.pathname);
             }
-
-            // Simulate sending message (you can connect backend here later)
-            document.getElementById("form-message").style.display = "block";
-
         });
     </script>
 </body>
