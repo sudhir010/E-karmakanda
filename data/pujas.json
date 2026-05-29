@@ -90,15 +90,6 @@
     "image": "./assets/images/havan.jpg"
   },
   {
-    "id": 11,
-    "name": "Navagraha Shanti",
-    "description": "A puja performed to reduce the malefic effects of planets and ensure planetary harmony.",
-    "image": "./assets/images/navagraha.jpg",
-    "duration": "2-3 hours",
-    "requirements": ["Navagraha yantra", "Nine planetary offerings", "Panchamrit"],
-    "benefits": ["Balances planetary energies", "Improves personal and professional life"]
-  },
-  {
     "id": 12,
     "name": "Lakshmi Puja",
     "description": "Dedicated to Goddess Lakshmi, this puja is performed for wealth, prosperity, and success.",
@@ -164,20 +155,11 @@
   {
     "id": 19,
     "name": "Sundarkand Paath",
-    "description": "Recitation of Sundarkand to overcome troubles and invoke Lord Hanuman’s blessings.",
+    "description": "Recitation of Sundarkand to overcome troubles and invoke Lord Hanuman's blessings.",
     "image": "./assets/images/sundarkand.jpg",
     "duration": "2 hours",
     "requirements": ["Hanuman Chalisa", "Sindoor", "Flowers", "Diya"],
     "benefits": ["Removes obstacles", "Gives mental strength"]
-  },
-  {
-    "id": 20,
-    "name": "Satyanarayan Katha",
-    "description": "A popular Hindu ritual worshipping Lord Vishnu to bring harmony and fulfillment.",
-    "image": "./assets/images/satyanarayan.jpg",
-    "duration": "2 hours",
-    "requirements": ["Panchamrit", "Tulsi leaves", "Banana", "Coconut"],
-    "benefits": ["Brings happiness and peace", "Ensures success"]
   }
 ]
 

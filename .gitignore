@@ -1,0 +1,15 @@
+# OS files
+Thumbs.db
+.DS_Store
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# PHP
+*.cache
+
+# Project specific
+database/*.local.php
